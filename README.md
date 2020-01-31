@@ -1,5 +1,7 @@
 # Hello World example
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wilf312/facast2.svg)](https://greenkeeper.io/)
+
 ## How to use
 
 ### Using `create-next-app`
