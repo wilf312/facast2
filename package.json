@@ -6,7 +6,7 @@
     "start": "next start",
     "type-check": "tsc",
     "build": "run-s build:site build:rss",
-    "build:rss": "node ./rssBuild.js",
+    "build:rss": "node ./rssBuild.js --isolatedModules",
     "build:site": "next build"
   },
   "main": "pages/index.tsx",
@@ -17,7 +17,7 @@
     "@types/styled-components": "4.4.2",
     "axios": "0.19.2",
     "js-yaml": "3.13.1",
-    "js-yaml-loader": "1.2.2",
+    "js-yaml-loader": "^1.2.2",
     "next": "9.2.2-canary.3",
     "podcast": "1.1.0",
     "react": "latest",
@@ -27,5 +27,8 @@
   },
   "license": "ISC",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
