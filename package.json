@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "build": "run-s build:site build:rss",
+    "build:rss": "node ./rssBuild.js",
+    "build:site": "next build"
   },
   "main": "pages/index.tsx",
   "dependencies": {
@@ -13,7 +15,9 @@
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
     "@types/styled-components": "4.4.2",
+    "js-yaml": "3.13.1",
     "next": "9.2.2-canary.3",
+    "podcast": "1.1.0",
     "react": "latest",
     "react-dom": "latest",
     "styled-components": "5.0.0",
