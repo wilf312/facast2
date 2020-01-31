@@ -3,19 +3,30 @@ import Link from "next/link";
 
 import styled from "styled-components";
 
-const Test = styled.div`
-  background: yellow;
+const Wrap = styled.div`
+  padding: 0 2rem;
+`;
+const Title = styled.h1`
+  text-align: center;
+  > img {
+    width: 200px;
+  }
+`;
+const Description = styled.p`
+  line-height: 1.7rem;
 `;
 
-const Thing: React.FC<{ msg: string }> = props => {
-  return <div>{props.msg}</div>;
-};
-
 export default () => (
-  <Test>
-    Hello World. <Thing msg="hello" />
+  <Wrap>
+    <Title>
+      <img src="/logo.svg" alt="FAcast" />
+    </Title>
+    <Description>
+      FAcastは、フロントエンド、車などの雑談を中心に、いま現在フリーランスで仕事をする人達が話す、暇をつぶすためのためのラジオです。
+    </Description>
+    <h2>エピソード</h2>
     <Link href="/about">
-      <a>test</a>
+      <a>っっっｂ</a>
     </Link>
-  </Test>
+  </Wrap>
 );
