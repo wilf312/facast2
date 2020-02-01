@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
+    "export": "next build && next export",
     "type-check": "tsc",
     "build": "run-s build:site build:rss",
     "build:rss": "node ./rssBuild.js --isolatedModules",
