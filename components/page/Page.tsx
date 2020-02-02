@@ -6,8 +6,6 @@ import { Header } from '../atom/Header'
 
 const { episodeList } = require('../../public/episode.yml')
 
-console.log(episodeList)
-
 const Wrap = styled.div`
   padding: 0 16px;
 `;
@@ -72,7 +70,7 @@ export const Top = () => (
     <EpisodeLabel>エピソード</EpisodeLabel>
     {episodeList.map((item: episodeListItem, index: number) => {
       return <Episode key={index}>
-        <Link as={`/${item.uid}`} href="/article" >
+        <Link as={`/${item.uid}`} href="/page" >
           <a>
             <span></span>
             <EpisodeTitle>{item.uid} : {item.title}</EpisodeTitle>
