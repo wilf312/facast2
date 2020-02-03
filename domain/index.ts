@@ -54,3 +54,28 @@ export const Sp = (css: string) => {
   }`
 }
 
+/**
+ * シェア機能
+ */
+
+export const share = () => {
+  const nav: any = navigator
+  if (nav.share) {
+    nav.share({
+      title: 'FAcast',
+      text: '',
+      url: 'https://facast.net/feed.xml'
+    })
+      .then(() => {
+        // シェアしたら実行される
+        console.log('Successful share');
+      })
+      .catch((error: Error) => {
+        // シェアせず終了した場合もここに入ってくる。
+        console.log('Error sharing', error);
+      })
+  } else {
+    alert('Web Share API is not supported!!');
+    // Web Share API未対応ブラウザ向けのフォールバックを実装する。
+  }
+}

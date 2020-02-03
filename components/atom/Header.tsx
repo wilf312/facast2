@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Sp } from '../../domain'
+import Link from "next/link";
+import { Sp, share } from '../../domain'
+
 const config = require('../../public/config.yml')
 
 const Title = styled.h1`
@@ -13,6 +15,11 @@ const Title = styled.h1`
 `;
 export const Header = () => (
   <Title>
-    <img src="/logo.svg" alt={config.name} />
+    <Link href="/" >
+      <a>
+        <img src="/logo.svg" alt={config.name} />
+      </a>
+      <button onClick={share}>Podcastへシェア</button>
+    </Link>
   </Title>
 );
