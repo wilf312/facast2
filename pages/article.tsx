@@ -1,5 +1,8 @@
+import { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Episode, episodeListItem } from '../domain'
 import { Header } from '../components/atom/Header'
-import { Episode } from '../domain'
+import { Wrap } from '../components/template/Wrap'
 
 function displayTime(unixTime: number) {
   var date = new Date(unixTime)
@@ -21,15 +24,40 @@ function displayTime(unixTime: number) {
   }
 }
 
-const b = Episode.getEpisode('004')
+const ShowNotes = styled.div`
+  white-space: pre-line;
+  line-height: 1.8em;
+  FONT-SIZE: 14px;
+`
 
-console.log(b.pubDate)
-console.log(displayTime(b.pubDate.getTime()))
+export default () => {
+
+  const [article, setArticle] = useState<episodeListItem>({
+    title: '',
+    description: '',
+    showNotes: '',
+    pubDate: new Date(),
+    duration: 0,
+    uid: ''
+  })
+
+  useEffect(() => {
+    setArticle(Episode.getEpisode('004'))
+  }, [])
 
 
-export default () => <div>
-  <Header />
-  
-  <h3>{`${b.uid} ${b.title}`}</h3>
-  <h4>{displayTime(b.pubDate.getTime())}</h4>
-</div>
+  return <Wrap>
+    <Header />
+
+    <h3>{`${article.uid} ${article.title}`}</h3>
+    <audio data-v-1eebddf0="" src="/static/storage/003.mp3" controls></audio>
+    <h4>{displayTime(article.pubDate.getTime())}</h4>
+
+    {article.showNotes && (<div>
+      <h5>Memo</h5>
+      <ShowNotes>{article.showNotes}</ShowNotes>
+    </div>)}
+
+
+  </Wrap>
+}
