@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "export": "next build && next export && build:rss",
+    "export": "run-s build:site export:next build:rss",
+    "export:next": "next export",
     "type-check": "tsc",
-    "build": "run-s build:site build:rss",
     "build:rss": "ts-node ./tool/rssBuild.ts --isolatedModules",
     "build:site": "next build",
     "yaml2json": "YAML_PATH=./public/episode.yml  node ./tool/yml2json.js"
