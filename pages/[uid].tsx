@@ -58,6 +58,8 @@ export default () => {
 
   const url = storage.getStorageUrl(article.uid)
 
+  console.log(url)
+
   return <Wrap>
     <Header />
 
@@ -70,4 +72,5 @@ export default () => {
       <ShowNotes>{article.showNotes}</ShowNotes>
     </div>)}
   </Wrap>
+
 }

@@ -40,6 +40,8 @@ export const Episode = {
 export const storage = {
   default: storageUrl,
   getStorageUrl: (number: string): string => {
+    // console.log(storageUrl)
+    // console.log(storageUrl.replace('fileNumber', number))
     return storageUrl.replace('fileNumber', number)
   }
 }

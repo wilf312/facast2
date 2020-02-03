@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { Sp, share } from '../../domain'
+import { Sp } from '../../domain'
 
 const config = require('../../public/config.yml')
 
@@ -20,6 +20,6 @@ export const Header = () => (
         <img src="/logo.svg" alt={config.name} />
       </a>
     </Link>
-    <button onClick={share}>Podcastへシェア</button>
+    {/* <button onClick={share}>Podcastへシェア</button> */}
   </Title>
 );
