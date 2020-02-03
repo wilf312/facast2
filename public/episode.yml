@@ -4,6 +4,7 @@ episodeList:
     title: I was born to run
     description: 走るために生まれた車、飛行機が飛ばなかった話、疲労回復の話をしました。
     duration:  3737
+    size:  "61721767"
     pubDate: Tue, 20 Dec 2018 20:00:00 +0900
     showNotes: |-
       1.走るために生まれた車
@@ -26,11 +27,13 @@ episodeList:
       初期衝動と気持ちの継続
           自分の人生を象徴するものにしか努力しつづけることは難しいんじゃないか みたいな話
       ゼルダ２週目
+
   -
     uid: "003"
     title: Where are your music roots?
     description: お酒を飲む仕事、否定される準備、世代を超える音楽、プロトコルの話をしました。
     duration:  3737
+    size:  "71742354"
     pubDate: Tue, 20 Nov 2018 20:00:00 +0900
     showNotes: "お酒を飲む仕事
 否定される準備
@@ -41,6 +44,7 @@ episodeList:
     title: Dead or Social Dead
     description: 食の連鎖、カフェイン中毒、データのバックアップ、コンビニのトイレの話をしました。
     duration:  7584
+    size:  "74820724"
     pubDate: Tue, 30 Oct 2018 21:00:00 +0900
     showNotes: "食の連鎖
 カフェイン中毒
@@ -53,6 +57,7 @@ episodeList:
     title: I've never redirected in my life
     description: ゼルダの伝説/switch、万引き少年を捕まえた話、お盆の渋滞の話をしました。
     duration:  5782
+    size:  "91808834"
     pubDate: Mon, 20 Aug 2018 21:00:00 +0900
     showNotes: "gitのさわり
 人生でリダイレクトをかけたことはない
@@ -65,6 +70,7 @@ lingvist https://lingvist.com/ja/
     title: Hello, FA cast
     description: 自己紹介、Podcastの名前、東京医科大女性受験者の得点操作、Car detailingの話をしました。
     duration:  "8885"
+    size:  "71443354"
     pubDate: Mon, 6 Aug 2018 21:00:00 +0900
     showNotes: "自己紹介 okadagenya  @wilf_genya
 自己紹介 hayatoaokiba @hayatoaokiba

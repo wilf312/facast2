@@ -1,7 +1,6 @@
 const Podcast = require("podcast");
 const fs = require("fs");
 const yaml = require("js-yaml");
-const axios = require('axios')
 
 let config;
 let episode;
@@ -61,15 +60,14 @@ type episodeListItem = {
   pubDate: string;
   duration: number;
   uid: string;
+  size: string;
 };
 episodeList
   .reverse()
   .forEach(
-    async ({ title, description, pubDate, duration, uid }: episodeListItem) => {
+    ({ title, description, pubDate, duration, uid, size }: episodeListItem) => {
       const path = `/static/storage/${uid}.mp3`;
       const domain = 'https://storage.googleapis.com'
-      const url = `/facast/storage/fileNumber.mp3`.replace('fileNumber', uid)
-      const res = await axios.head(`${domain}${url}`)
 
       feed.addItem(
         Object.assign(
@@ -83,7 +81,7 @@ episodeList
             enclosure: {
               url: `${domain}${path}`,
               type: "audio/mpeg",
-              length: `${res.headers['Content-Length']}`
+              length: `${size}`
             }
           },
           feedConst
