@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Episode, episodeListItem } from '../domain'
 import { Header } from '../components/atom/Header'
+import { Audio } from '../components/atom/Audio'
 import { Wrap } from '../components/template/Wrap'
 
 function displayTime(unixTime: number) {
@@ -27,7 +28,7 @@ function displayTime(unixTime: number) {
 const ShowNotes = styled.div`
   white-space: pre-line;
   line-height: 1.8em;
-  FONT-SIZE: 14px;
+  font-size: 14px;
 `
 
 export default () => {
@@ -40,17 +41,17 @@ export default () => {
     duration: 0,
     uid: ''
   })
-
   useEffect(() => {
     setArticle(Episode.getEpisode('004'))
   }, [])
 
+  const url = `https://github.com/wilf312/FAcast/raw/master/static/storage/${article.uid}.mp3`
 
   return <Wrap>
     <Header />
 
     <h3>{`${article.uid} ${article.title}`}</h3>
-    <audio data-v-1eebddf0="" src="/static/storage/003.mp3" controls></audio>
+    <Audio src={url} />
     <h4>{displayTime(article.pubDate.getTime())}</h4>
 
     {article.showNotes && (<div>
