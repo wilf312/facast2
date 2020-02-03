@@ -4,10 +4,10 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "export": "next build && next export",
+    "export": "next build && next export && build:rss",
     "type-check": "tsc",
     "build": "run-s build:site build:rss",
-    "build:rss": "node ./rssBuild.js --isolatedModules",
+    "build:rss": "ts-node ./tool/rssBuild.ts --isolatedModules",
     "build:site": "next build",
     "yaml2json": "YAML_PATH=./public/episode.yml  node ./tool/yml2json.js"
   },
@@ -17,7 +17,7 @@
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
     "@types/styled-components": "4.4.2",
-    "axios": "0.19.2",
+    "axios": "^0.19.2",
     "js-yaml-loader": "^1.2.2",
     "next": "9.2.2-canary.3",
     "podcast": "1.1.0",
@@ -31,6 +31,7 @@
   "description": "",
   "devDependencies": {
     "js-yaml": "^3.13.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^8.6.2"
   }
 }

@@ -1,12 +1,13 @@
 const Podcast = require("podcast");
 const fs = require("fs");
 const yaml = require("js-yaml");
+const axios = require('axios')
 
 let config;
 let episode;
 try {
-  episode = yaml.safeLoad(fs.readFileSync("./config/episode.yml", "utf8"));
-  config = yaml.safeLoad(fs.readFileSync("./config/config.yml", "utf8"));
+  episode = yaml.safeLoad(fs.readFileSync("./public/episode.yml", "utf8"));
+  config = yaml.safeLoad(fs.readFileSync("./public/config.yml", "utf8"));
 } catch (e) {
   console.log(e);
 }
@@ -64,9 +65,11 @@ type episodeListItem = {
 episodeList
   .reverse()
   .forEach(
-    ({ title, description, pubDate, duration, uid }: episodeListItem) => {
+    async ({ title, description, pubDate, duration, uid }: episodeListItem) => {
       const path = `/static/storage/${uid}.mp3`;
-      const stat = fs.statSync(`.${path}`);
+      const domain = 'https://storage.googleapis.com'
+      const url = `/facast/storage/fileNumber.mp3`.replace('fileNumber', uid)
+      const res = await axios.head(`${domain}${url}`)
 
       feed.addItem(
         Object.assign(
@@ -80,7 +83,7 @@ episodeList
             enclosure: {
               url: `${domain}${path}`,
               type: "audio/mpeg",
-              length: `${stat.size}`
+              length: `${res.headers['Content-Length']}`
             }
           },
           feedConst
@@ -92,7 +95,7 @@ episodeList
 // cache the xml to send to clients
 const xml = feed.buildXml();
 
-fs.writeFile("dist/feed.xml", xml, (err: any) => {
+fs.writeFile("out/feed.xml", xml, (err: any) => {
   if (err) throw err;
   console.log("The file has been saved!");
 });
