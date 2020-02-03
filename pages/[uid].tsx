@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter } from 'next/router'
 
-import { Episode, episodeListItem } from '../domain'
+import { Episode, episodeListItem, storage } from '../domain'
 import { Header } from '../components/atom/Header'
 import { Audio } from '../components/atom/Audio'
 import { Wrap } from '../components/template/Wrap'
@@ -52,7 +52,11 @@ export default () => {
     setArticle(Episode.getEpisode(uid as string))
   }, [])
 
-  const url = `https://github.com/wilf312/FAcast/raw/master/static/storage/${article.uid}.mp3`
+  if (!article.uid) {
+    return null
+  }
+
+  const url = storage.getStorageUrl(article.uid)
 
   return <Wrap>
     <Header />
@@ -65,7 +69,5 @@ export default () => {
       <h5>Memo</h5>
       <ShowNotes>{article.showNotes}</ShowNotes>
     </div>)}
-
-
   </Wrap>
 }

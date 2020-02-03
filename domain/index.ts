@@ -1,4 +1,5 @@
 const { episodeList } = require('../public/episode.yml')
+const { storageUrl } = require('../public/config.yml')
 
 
 type episodeListItemBefore = {
@@ -34,6 +35,13 @@ const getEpisode = (uid: string): episodeListItem => {
 export const Episode = {
   episodeList: episodeListCasted,
   getEpisode
+}
+
+export const storage = {
+  default: storageUrl,
+  getStorageUrl: (number: string): string => {
+    return storageUrl.replace('fileNumber', number)
+  }
 }
 
 /**
