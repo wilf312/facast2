@@ -66,7 +66,7 @@ episodeList
   .reverse()
   .forEach(
     ({ title, description, pubDate, duration, uid, size }: episodeListItem) => {
-      const path = `/static/storage/${uid}.mp3`;
+      const path = `/facast/storage/${uid}.mp3`;
       const domain = 'https://storage.googleapis.com'
 
       feed.addItem(
