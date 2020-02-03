@@ -2,19 +2,21 @@ const { episodeList } = require('../public/episode.yml')
 
 
 type episodeListItemBefore = {
-  title: string;
-  description: string;
-  pubDate: string;
-  duration: number;
-  uid: string;
-};
-type episodeListItem = {
-  title: string;
-  description: string;
-  pubDate: Date;
-  duration: number;
-  uid: string;
-};
+  title: string
+  description: string
+  pubDate: string
+  duration: number
+  showNotes: string
+  uid: string
+}
+export type episodeListItem = {
+  title: string
+  description: string
+  pubDate: Date
+  duration: number
+  showNotes: string
+  uid: string
+}
 
 const episodeListCasted = episodeList.map((d: episodeListItemBefore): episodeListItem => {
   return {
