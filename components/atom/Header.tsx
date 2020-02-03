@@ -19,7 +19,7 @@ export const Header = () => (
       <a>
         <img src="/logo.svg" alt={config.name} />
       </a>
-      <button onClick={share}>Podcastへシェア</button>
     </Link>
+    <button onClick={share}>Podcastへシェア</button>
   </Title>
 );
