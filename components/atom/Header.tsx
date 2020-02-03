@@ -7,7 +7,7 @@ const config = require('../../public/config.yml')
 
 const Title = styled.h1`
   text-align: center;
-  > img {
+  img {
     width: 180px;
 
     ${Sp(`width: 120px;`)}
