@@ -67,7 +67,7 @@ episodeList
   .forEach(
     ({ title, description, pubDate, duration, uid, size }: episodeListItem) => {
       const path = `/facast/storage/${uid}.mp3`;
-      const domain = 'https://storage.googleapis.com'
+      const fileDomain = 'https://storage.googleapis.com'
 
       feed.addItem(
         Object.assign(
@@ -75,11 +75,11 @@ episodeList
           {
             title: `${uid} ${title}`,
             description,
-            url: `${domain}/${uid}`, // link to the item
+            url: `${fileDomain}${path}`, // link to the item
             date: pubDate, // any format that js Date can parse.
             itunesDuration: duration,
             enclosure: {
-              url: `${domain}${path}`,
+              url: `${fileDomain}${path}`,
               type: "audio/mpeg",
               length: `${size}`
             }
