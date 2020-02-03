@@ -8,6 +8,7 @@ import { Episode as episode } from '../domain'
 
 const Description = styled.p`
   line-height: 1.7rem;
+  padding: 0 8px;
 `;
 
 const EpisodeLabel = styled.h2`

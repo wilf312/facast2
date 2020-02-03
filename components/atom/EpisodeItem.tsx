@@ -44,7 +44,7 @@ type EpisodeItemProps = {
 }
 export const EpisodeItem = (props: EpisodeItemProps) => {
   return <Episode >
-    <Link as={`/${props.uid}`} href="/article" >
+    <Link as={`/${props.uid}`} href="/[uid]" >
       <a>
         <span></span>
         <EpisodeTitle>{props.uid} : {props.title}</EpisodeTitle>

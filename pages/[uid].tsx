@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useRouter } from 'next/router'
+
 import { Episode, episodeListItem } from '../domain'
 import { Header } from '../components/atom/Header'
 import { Audio } from '../components/atom/Audio'
@@ -32,6 +34,11 @@ const ShowNotes = styled.div`
 `
 
 export default () => {
+  const router = useRouter()
+  console.log(router.query.uid)
+  const { uid } = router.query
+  console.log(uid)
+  console.log(typeof uid)
 
   const [article, setArticle] = useState<episodeListItem>({
     title: '',
@@ -42,7 +49,7 @@ export default () => {
     uid: ''
   })
   useEffect(() => {
-    setArticle(Episode.getEpisode('004'))
+    setArticle(Episode.getEpisode(uid as string))
   }, [])
 
   const url = `https://github.com/wilf312/FAcast/raw/master/static/storage/${article.uid}.mp3`
