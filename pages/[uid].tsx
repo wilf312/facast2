@@ -27,6 +27,22 @@ function displayTime(unixTime: number) {
   }
 }
 
+const Title = styled.h1`
+  font-size: 24px;
+`
+const TitleWrap = styled.div`
+  margin-top: 40px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`
+
+const ShowNotesLabel = styled.h3`
+  margin-top: 48px;
+  margin-bottom: 16px;
+`
+
 const ShowNotes = styled.div`
   white-space: pre-line;
   line-height: 1.8em;
@@ -57,13 +73,14 @@ export default () => {
 
   return <Wrap>
     <Header />
-
-    <h3>{`${article.uid} ${article.title}`}</h3>
+    <TitleWrap>
+      <Title>{`${article.uid} ${article.title}`}</Title>
+      <time>{displayTime(article.pubDate.getTime())}</time>
+    </TitleWrap>
     <Audio src={url} />
-    <h4>{displayTime(article.pubDate.getTime())}</h4>
 
     {article.showNotes && (<div>
-      <h5>Memo</h5>
+      <ShowNotesLabel>Memo</ShowNotesLabel>
       <ShowNotes>{article.showNotes}</ShowNotes>
     </div>)}
   </Wrap>
