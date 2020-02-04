@@ -22,7 +22,7 @@
     "podcast": "1.1.0",
     "react": "latest",
     "react-dom": "latest",
-    "styled-components": "5.0.0",
+    "styled-components": "5.0.1",
     "typescript": "3.7.5"
   },
   "license": "ISC",
