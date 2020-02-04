@@ -7,7 +7,7 @@ const Episode = styled.div`
   position: relative;
   a {
     display: block;
-    padding: 16px 8px;
+    padding: 16px 0;
     border-bottom: solid 1px #e8e8e8;
     color: black;
     text-decoration: none;

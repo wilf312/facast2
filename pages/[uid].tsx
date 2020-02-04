@@ -35,10 +35,7 @@ const ShowNotes = styled.div`
 
 export default () => {
   const router = useRouter()
-  console.log(router.query.uid)
   const { uid } = router.query
-  console.log(uid)
-  console.log(typeof uid)
 
   const [article, setArticle] = useState<episodeListItem>({
     title: '',
@@ -57,8 +54,6 @@ export default () => {
   }
 
   const url = storage.getStorageUrl(article.uid)
-
-  console.log(url)
 
   return <Wrap>
     <Header />
