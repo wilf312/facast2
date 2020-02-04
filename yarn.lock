@@ -1129,6 +1129,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@next/polyfill-nomodule@9.2.2-canary.10":
+  version "9.2.2-canary.10"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-nomodule/-/polyfill-nomodule-9.2.2-canary.10.tgz#7ca9793ff4b9bf18564ae4702fa08e5e7938a792"
+  integrity sha512-Q/Js3PPjYK6xm7+4kSw0D/3BEx5SxRgJSKQb1yT7LXdYBU284MCTM7bFETz2otlxoWFfevUUpJqsxcB0OxJI6g==
+
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -2912,6 +2917,11 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+finally-polyfill@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/finally-polyfill/-/finally-polyfill-0.1.0.tgz#2a17b16581d9477db16a703c7b79a898ac0b7d50"
+  integrity sha512-J1LEcZ5VXe1l3sEO+S//WqL5wcJ/ep7QeKJA6HhNZrcEEFj0eyC8IW3DEZhxySI2bx3r85dwAXz+vYPGuHx5UA==
+
 find-cache-dir@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-1.0.0.tgz#9288e3e9e3cc3748717d39eade17cf71fc30ee6f"
@@ -4175,10 +4185,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@9.2.2-canary.3:
-  version "9.2.2-canary.3"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.2.2-canary.3.tgz#cbc9fc1900db22f2e76dd2398c10ac583302d464"
-  integrity sha512-3jyqFhlhEYxoa2iLa+UJVK0X0oLl70ZCCGMcMOzUc3+kiWEETv3zM/xPWS35FVOnXoqZCrYDuDxpSjqFYZS8uQ==
+next@9.2.2-canary.10:
+  version "9.2.2-canary.10"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.2.2-canary.10.tgz#9671017efd069f6642dd7019bdc5680dcb53fea3"
+  integrity sha512-kEvB3zqNiAbt5ELEvH+5yZVQKcoY0wN7O3R7SCTc4UhBrDTlS7iGzwHhBfl2yBREj6B6o69gFaFrr79ROxQGXw==
   dependencies:
     "@ampproject/toolbox-optimizer" "1.1.1"
     "@babel/core" "7.7.2"
@@ -4196,6 +4206,7 @@ next@9.2.2-canary.3:
     "@babel/preset-typescript" "7.7.2"
     "@babel/runtime" "7.7.2"
     "@babel/runtime-corejs2" "7.7.2"
+    "@next/polyfill-nomodule" "9.2.2-canary.10"
     amphtml-validator "1.0.23"
     async-retry "1.2.3"
     async-sema "3.0.0"
@@ -4219,6 +4230,7 @@ next@9.2.2-canary.3:
     escape-string-regexp "2.0.0"
     etag "1.8.1"
     file-loader "4.2.0"
+    finally-polyfill "0.1.0"
     find-up "4.0.0"
     fork-ts-checker-webpack-plugin "3.1.1"
     fresh "0.5.2"
