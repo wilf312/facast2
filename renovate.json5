@@ -27,7 +27,7 @@
     "ライブラリの自動更新"
   ],
   "schedule": [
-    "everyday"
+    "after 10pm and before 5am every weekday"
   ],
   "timezone": "Asia/Tokyo"
 }
