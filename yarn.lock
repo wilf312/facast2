@@ -1129,10 +1129,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
-"@next/polyfill-nomodule@9.2.2-canary.11":
-  version "9.2.2-canary.11"
-  resolved "https://registry.yarnpkg.com/@next/polyfill-nomodule/-/polyfill-nomodule-9.2.2-canary.11.tgz#4a98cf14a206d7a490c343a31650f09cd7b626cb"
-  integrity sha512-gnkpR1+BxaM0uiTYBGsFBY8ws6kbNyuty2/yX6AFROr1pIjgU2jWo7lPPYr1tQOXISg2+bkXB1FKOuZXWwv66A==
+"@next/polyfill-nomodule@9.2.2-canary.12":
+  version "9.2.2-canary.12"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-nomodule/-/polyfill-nomodule-9.2.2-canary.12.tgz#398665216b6106d775a4558e5c02ea6c52d0e916"
+  integrity sha512-BiihkLCzEUaOY21+TxZWzEOTcfqPhbRnY5cX+Pr0gnGWU/KbwW7y+cL9e1IxNMPSDIBJFRZESdafYBG9jg2QFQ==
 
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
@@ -4184,6 +4184,13 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+native-url@0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/native-url/-/native-url-0.2.6.tgz#ca1258f5ace169c716ff44eccbddb674e10399ae"
+  integrity sha512-k4bDC87WtgrdD362gZz6zoiXQrl40kYlBmpfmSjwRO1VU0V5ccwJTlxuE72F6m3V0vc1xOf6n3UCP9QyerRqmA==
+  dependencies:
+    querystring "^0.2.0"
+
 needle@^2.2.1:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.4.tgz#51931bff82533b1928b7d1d69e01f1b00ffd2a4e"
@@ -4213,10 +4220,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@9.2.2-canary.11:
-  version "9.2.2-canary.11"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.2.2-canary.11.tgz#944bf2843205183749ab64e7090e361ffc0e7473"
-  integrity sha512-QQRR9WIGr/T76XzIqTmg0dsMbAegkBZNAMPGBUGIFLgszHdnykP+lJdfqKn0/1qfhx56XRrwc39LV5MqUcdKNA==
+next@9.2.2-canary.12:
+  version "9.2.2-canary.12"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.2.2-canary.12.tgz#9ed76303da7374251bb210d592b8fb3618b8f718"
+  integrity sha512-ooTzCwiz12oXTbJ+skM3UMsrCfUe1bcHOSzm/gxHn86rib2RG5ccYs6IgtkJXT8eSt/YO0DQwzpnH68J1rE5nQ==
   dependencies:
     "@ampproject/toolbox-optimizer" "1.1.1"
     "@babel/core" "7.7.2"
@@ -4234,7 +4241,7 @@ next@9.2.2-canary.11:
     "@babel/preset-typescript" "7.7.2"
     "@babel/runtime" "7.7.2"
     "@babel/runtime-corejs2" "7.7.2"
-    "@next/polyfill-nomodule" "9.2.2-canary.11"
+    "@next/polyfill-nomodule" "9.2.2-canary.12"
     amphtml-validator "1.0.23"
     async-retry "1.2.3"
     async-sema "3.0.0"
@@ -4275,6 +4282,7 @@ next@9.2.2-canary.11:
     lru-cache "5.1.1"
     mini-css-extract-plugin "0.8.0"
     mkdirp "0.5.1"
+    native-url "0.2.6"
     node-fetch "2.6.0"
     object-assign "4.1.1"
     ora "3.4.0"
