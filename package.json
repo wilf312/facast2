@@ -18,7 +18,7 @@
     "@types/react-dom": "16.9.5",
     "@types/styled-components": "4.4.2",
     "js-yaml-loader": "^1.2.2",
-    "next": "9.2.2-canary.12",
+    "next": "9.2.2-canary.21",
     "podcast": "1.1.0",
     "react": "latest",
     "react-dom": "latest",
