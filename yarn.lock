@@ -1153,10 +1153,10 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
 
-"@types/node@13.7.5":
-  version "13.7.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.7.5.tgz#2da244d764666f85154274cac94a1cb5b88dcb8d"
-  integrity sha512-PfSBCTQhAQg6QBP4UhXgrZ/wQ3pjfwBr4sA7Aul+pC9XwGgm9ezrJF7OiC/I4Kf+7VPu/5ThKngAruqxyctZfA==
+"@types/node@13.9.1":
+  version "13.9.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.1.tgz#96f606f8cd67fb018847d9b61e93997dabdefc72"
+  integrity sha512-E6M6N0blf/jiZx8Q3nb0vNaswQeEyn0XlupO+xN6DtJ6r6IT4nXrTry7zhIfYvFCl3/8Cu6WIysmUBKiqV0bqQ==
 
 "@types/prop-types@*":
   version "15.7.3"
