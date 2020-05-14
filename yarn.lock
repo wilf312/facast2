@@ -4733,10 +4733,10 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-podcast@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/podcast/-/podcast-1.1.0.tgz#0e4ea9948a5a2719fada3bd71575403d0317ff9c"
-  integrity sha512-LmH4hhZj+Kifeo/V/SaMCCrWNRJVuApK/MBZ2/4BZYX1pt4Rm51HoC9/55i+a1+8BbqMpuzunUWmNLwaFykx3A==
+podcast@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/podcast/-/podcast-1.2.0.tgz#3e3282e675bd3c0e7a327660ec1d0c92aed46b31"
+  integrity sha512-DjS257XeLUDVHQqB3+BG38u6yNmblpR5VIIwsmj32RXXUQEZ+gjxYlTF2Ho/RfEEfewCDn+Wy3fdgdrD+3yWqg==
   dependencies:
     rss "^1.2.2"
 
