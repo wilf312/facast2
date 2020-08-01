@@ -23,7 +23,7 @@
     "react": "latest",
     "react-dom": "latest",
     "styled-components": "5.1.1",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "license": "ISC",
   "keywords": [],
