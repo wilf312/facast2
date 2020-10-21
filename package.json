@@ -7,7 +7,7 @@
     "export": "run-s build:site export:next build:rss",
     "export:next": "next export",
     "type-check": "tsc",
-    "build:rss": "ts-node ./tool/rssBuild.ts --isolatedModules",
+    "build:rss": "node ./tool/rssBuild.js",
     "build:site": "next build",
     "yaml2json": "YAML_PATH=./public/episode.yml  node ./tool/yml2json.js"
   },
